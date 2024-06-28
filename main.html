@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마늘 클리커</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stats-bar">
+        <div class="stat-item">
+            <h3>총 마늘</h3>
+            <p id="total-garlic">0</p>
+        </div>
+        <div class="stat-item">
+            <h3>초당 생산량</h3>
+            <p id="garlic-per-second">0</p>
+        </div>
+        <div class="stat-item">
+            <h3>총 클릭 수</h3>
+            <p id="total-clicks">0</p>
+        </div>
+    </div>
+    <div class="game-container">
+        <div class="main-area">
+            <header>
+                <h1>마늘 클리커</h1>
+            </header>
+            <div id="garlic-container">
+                <img id="garlic" src="garlic.png" alt="마늘">
+            </div>
+            <div class="stats">
+                <p class="garlic-count">마늘: <span id="garlic-count">0</span></p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="upgrade-container">
+        <h2>업그레이드</h2>
+        <div class="upgrade-item">
+            <div class="upgrade-icon-container">
+                <img src="cursor.png" alt="커서" class="upgrade-icon">
+            </div>
+            <div class="upgrade-info">
+                <h3><span id="cursor-name">마늘초</span></h3>
+                <p>보유: <span id="cursor-count">0</span></p>
+                <p>생산량: 1/초</p>
+                <p>비용: <span id="cursor-cost">15</span> 마늘</p>
+            </div>
+            <button id="buy-cursor">구매</button>
+        </div>
+        <div class="upgrade-item locked" id="farm-upgrade">
+            <div class="upgrade-icon-container">
+                <img src="question.png" alt="???" class="upgrade-icon question-icon">
+                <img src="farm.png" alt="농장" class="upgrade-icon real-icon" style="display: none;">
+            </div>
+            <div class="upgrade-info">
+                <h3><span id="farm-name">???</span></h3>
+                <p>보유: <span id="farm-count">0</span></p>
+                <p>생산량: 5/초</p>
+                <p>비용: <span id="farm-cost">100</span> 마늘</p>
+            </div>
+            <button id="buy-farm" disabled>???</button>
+        </div>
+        <div class="upgrade-item locked" id="factory-upgrade">
+            <div class="upgrade-icon-container">
+                <img src="question.png" alt="???" class="upgrade-icon question-icon">
+                <img src="factory.png" alt="공장" class="upgrade-icon real-icon" style="display: none;">
+            </div>
+            <div class="upgrade-info">
+                <h3><span id="factory-name">???</span></h3>
+                <p>보유: <span id="factory-count">0</span></p>
+                <p>생산량: 50/초</p>
+                <p>비용: <span id="factory-cost">1000</span> 마늘</p>
+            </div>
+            <button id="buy-factory" disabled>???</button>
+        </div>
+        <div class="upgrade-item locked" id="lab-upgrade" style="display: none;">
+            <div class="upgrade-icon-container">
+                <img src="question.png" alt="???" class="upgrade-icon question-icon">
+                <img src="lab.png" alt="연구소" class="upgrade-icon real-icon" style="display: none;">
+            </div>
+            <div class="upgrade-info">
+                <h3><span id="lab-name">???</span></h3>
+                <p>보유: <span id="lab-count">0</span></p>
+                <p>생산량: 500/초</p>
+                <p>비용: <span id="lab-cost">10000</span> 마늘</p>
+            </div>
+            <button id="buy-lab" disabled>???</button>
+        </div>
+        <!-- <div class="upgrade-item locked" id="college-upgrade" style="display: none;">
+            <div class="upgrade-icon-container">
+                <img src="question.png" alt="???" class="upgrade-icon question-icon">
+                <img src="college.png" alt="대학" class="upgrade-icon real-icon" style="display: none;">
+            </div>
+            <div class="upgrade-info">
+                <h3><span id="college-name">???</span></h3>
+                <p>보유: <span id="college-count">0</span></p>
+                <p>생산량: 5000/초</p>
+                <p>비용: <span id="college-cost">100000</span> 마늘</p>
+            </div>
+            <button id="buy-college" disabled>???</button>
+        </div> -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
